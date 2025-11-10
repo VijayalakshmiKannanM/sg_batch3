@@ -1,0 +1,3 @@
+Line 1: Hello, this is notebook.txt
+Line 2: File handling demo
+Line 3: Appended by script
