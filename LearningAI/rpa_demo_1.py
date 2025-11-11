@@ -20,14 +20,16 @@ time.sleep(2)
 #location=pyautogui.locateOnScreen("pic.png",confidence=0.8)
 
 try:
-    location = pyautogui.locateOnScreen("pic.png", confidence=0.8)
-    if location:
-        print("Found image at:", location)
-        pyautogui.click(location)
-    else:
-        print("Image not found on screen.")
-except pyautogui.ImageNotFoundException:
-    print("Image not found! Check visibility, scaling, and file path.")
+    image_path = r"C:\Users\Achsah\OneDrive\Pictures\image.png"
+
+if not os.path.exists(image_path):
+    print("⚠️ Image not found:", image_path)
+else:
+    location = pyautogui.locateOnScreen(image_path, confidence=0.8)
+    print("✅ Location:", location)
+
+#except pyautogui.ImageNotFoundException:
+  #  print("Image not found! Check visibility, scaling, and file path.")
 
 pyautogui.doubleClick(2324,889)
 
