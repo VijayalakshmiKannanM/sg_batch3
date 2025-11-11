@@ -1,6 +1,38 @@
 import streamlit as st
 import time
 
+# 🌟 Page Config
+st.set_page_config(page_title="Vellore Annual Convention 2025 🎉", page_icon="🎆", layout="centered")
+
+# 🌈 Background styling (choose either image or gradient)
+page_bg = """
+<style>
+/* Background image */
+[data-testid="stAppViewContainer"] {
+    background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Transparent white box effect */
+[data-testid="stMarkdownContainer"], .stTextInput, .stButton button {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.stButton>button {
+    background-color: #0078ff;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+}
+</style>
+"""
+st.markdown(page_bg, unsafe_allow_html=True)
+
 # 🌟 Title Section
 st.title("Welcome to Vellore Annual Convention 2025 🎉")
 st.subheader("We cordially invite you in the name of Jesus Christ!")
@@ -14,9 +46,6 @@ if st.button("Submit"):
         st.write(f"Hello, {name}! We're excited to have you join us at the convention.")
         st.balloons()
         st.success("See you there! 🙌")
-        
-        # Optional image — remove this line if vellore_banner.png is not available
-        # st.image("vellore_banner.png", caption="Vellore Missionary Conference 2025", use_container_width=True)
 
         # Message before auto-close
         st.info("This page will automatically close in 10 seconds...")
@@ -47,8 +76,7 @@ st.markdown("""
 st.markdown("## 🎬 Watch Our Convention Highlights")
 
 # You can add multiple YouTube videos here
-st.video("https://www.bing.com/videos/search?q=pastor+abraham+tpm+chief+minister&view=detail&mid=35635B58E12849FEE1CE35635B58E12849FEE1CE&FORM=VIRE")  # Example: Christian worship song
-#st.video("https://www.youtube.com/watch?v=7Fz1x5l9XKw")  # Example: Church convention highlights
+st.video("https://www.youtube.com/watch?v=7Fz1x5l9XKw")
 
 # Optional message
 st.success("✨ Enjoy the worship and celebration! ✨")
